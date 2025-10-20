@@ -1,0 +1,36 @@
+{
+  "name": "Solanouns #4",
+  "description": "A generative avatar art NFT on Solana featuring distinctive traits and characteristics.",
+  "image": "/images/4.png",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Yellow"
+    },
+    {
+      "trait_type": "Body",
+      "value": "Cyborg"
+    },
+    {
+      "trait_type": "Accessory",
+      "value": "Goggles"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Helmet"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Legendary"
+    }
+  ],
+  "collection": {
+    "name": "Solanouns",
+    "family": "Solanouns"
+  },
+  "symbol": "SOLANOUNS",
+  "seller_fee_basis_points": 500,
+  "external_url": "https://solanouns.wtf",
+  "edition": 4,
+  "background_color": "fccf47"
+}
