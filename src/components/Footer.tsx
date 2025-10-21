@@ -1,14 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-900 dark:bg-black text-white py-16 transition-colors duration-300">
+    <footer className="bg-gray-900 dark:bg-black text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <div className="text-2xl font-bold">🕶️ Solanouns</div>
-            <p className="text-gray-400 dark:text-gray-500 transition-colors duration-300">
-              A generative avatar art collective on Solana, creating one Solanouns every day, forever.
+            <p className="text-gray-400 dark:text-gray-500">
+              A generative avatar art collective on Solana. 2,222 unique digital collectibles.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 dark:text-gray-500 hover:text-solana-purple transition-colors">
@@ -23,15 +24,15 @@ const Footer: React.FC = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Project</h4>
             <div className="space-y-2">
-              <a href="#" className="block text-gray-400 dark:text-gray-500 hover:text-white transition-colors">
+              <a href="#about" className="block text-gray-400 dark:text-gray-500 hover:text-white transition-colors">
                 About
               </a>
-              <a href="#" className="block text-gray-400 dark:text-gray-500 hover:text-white transition-colors">
+              <a href="#community" className="block text-gray-400 dark:text-gray-500 hover:text-white transition-colors">
                 Roadmap
               </a>
-              <a href="#" className="block text-gray-400 dark:text-gray-500 hover:text-white transition-colors">
-                FAQ
-              </a>
+              <Link to="/docs" className="block text-gray-400 dark:text-gray-500 hover:text-white transition-colors">
+                Documentation
+              </Link>
             </div>
           </div>
           
