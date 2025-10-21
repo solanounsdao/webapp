@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Collection from './components/Collection';
 import Features from './components/Features';
+import Community from './components/Community';
 import Footer from './components/Footer';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <About />
         <Collection />
         <Features />
+        <Community />
         <Footer />
       </div>
     </ThemeProvider>
