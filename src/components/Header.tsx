@@ -9,8 +9,13 @@ const Header: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <div className="text-2xl font-bold text-solana-purple">
-              🕶️ Solanouns
+            <div className="flex items-center space-x-3 text-2xl font-bold text-solana-purple">
+              <img 
+                src="/logo.png" 
+                alt="Solanouns Logo" 
+                className="w-8 h-8 object-contain logo-transparent logo-blend"
+              />
+              <span>Solanouns</span>
             </div>
           </div>
           
@@ -20,9 +25,6 @@ const Header: React.FC = () => {
             </a>
             <a href="#collection" className="text-gray-700 dark:text-gray-300 hover:text-solana-purple transition-colors">
               Collection
-            </a>
-            <a href="#governance" className="text-gray-700 dark:text-gray-300 hover:text-solana-purple transition-colors">
-              Governance
             </a>
             <a href="#community" className="text-gray-700 dark:text-gray-300 hover:text-solana-purple transition-colors">
               Community
@@ -35,7 +37,7 @@ const Header: React.FC = () => {
               className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
               aria-label="Toggle theme"
             >
-              {theme === 'light' ? '🌙' : '☀️'}
+              {theme === 'dark' ? '☀️' : '🌙'}
             </button>
           </div>
         </div>

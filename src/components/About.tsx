@@ -9,7 +9,7 @@ const About: React.FC = () => {
             What are Solanouns?
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Solanouns are generative NFT avatars based on people, places, and things on Solana. 
+            Solanouns are generative cult art based on people, places, and things on Solana. 
             A collection of 2,222 unique digital collectibles living on the Solana blockchain.
           </p>
         </div>
