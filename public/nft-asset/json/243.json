@@ -1,29 +1,29 @@
 {
   "name": "Solanouns #243",
   "symbol": "SOLN",
-  "description": "Solanouns is a groundbreaking experiment in decentralized creativity and governance. Each Solanoun is a 2,222-piece generative pixel art collection on Solana—featuring whimsical traits like wacky glasses, unique accessories, and quirky designs. NFT sale proceeds fund the Solanouns DAO treasury, a community-governed pool supporting creative projects that embody the project's ethos. Fully open-source, all artwork and code are freely available for public use.",
+  "description": "Solanouns is a generative cult art collective of 2222 unique NFTs on Solana.",
   "image": "243.png",
   "edition": 243,
   "attributes": [
     {
       "trait_type": "Background",
-      "value": "Background 4"
+      "value": "Background 7"
     },
     {
       "trait_type": "Head",
-      "value": "Head 179"
+      "value": "Head 145"
     },
     {
       "trait_type": "Body",
-      "value": "Body 8"
+      "value": "Body 5"
     },
     {
       "trait_type": "Accessories",
-      "value": "Accessories 57"
+      "value": "Accessories 24"
     },
     {
       "trait_type": "Glasses",
-      "value": "Glasses 22"
+      "value": "Glasses 6"
     }
   ],
   "compiler": "The thirdweb Art Engine"
