@@ -1,0 +1,27 @@
+{
+  "name": "Solanouns - NFT Collection on Solana",
+  "short_name": "Solanouns",
+  "description": "Solanouns is a generative cult art collective of 2222 unique NFTs on Solana blockchain",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111827",
+  "theme_color": "#9333ea",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["entertainment", "games", "lifestyle"],
+  "lang": "en",
+  "dir": "ltr"
+}
