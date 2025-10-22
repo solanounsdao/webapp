@@ -25,13 +25,14 @@ const Header: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <Link to="/" className="flex items-center space-x-3 text-2xl font-bold text-solana-purple hover:text-solana-green transition-colors">
+            <Link to="/" className="flex items-center space-x-2 sm:space-x-3 text-xl sm:text-2xl font-bold text-solana-purple hover:text-solana-green transition-colors">
               <img 
                 src="/logo.png" 
                 alt="Solanouns Logo" 
-                className="w-8 h-8 object-contain logo-transparent logo-blend"
+                className="w-6 sm:w-8 h-6 sm:h-8 object-contain logo-transparent logo-blend"
               />
-              <span>Solanouns</span>
+              <span className="hidden xs:inline sm:inline">Solanouns</span>
+              <span className="xs:hidden sm:hidden">S</span>
             </Link>
           </div>
           
@@ -121,20 +122,6 @@ const Header: React.FC = () => {
                 className="block w-full text-left text-gray-700 dark:text-gray-300 hover:text-solana-purple transition-colors"
               >
                 Docs
-              </Link>
-              <Link 
-                to="/brand-kit" 
-                onClick={() => setIsMenuOpen(false)}
-                className="block w-full text-left text-gray-700 dark:text-gray-300 hover:text-solana-purple transition-colors"
-              >
-                Brand Kit
-              </Link>
-              <Link 
-                to="/developer-tools" 
-                onClick={() => setIsMenuOpen(false)}
-                className="block w-full text-left text-gray-700 dark:text-gray-300 hover:text-solana-purple transition-colors"
-              >
-                Dev Tools
               </Link>
             </div>
           </div>

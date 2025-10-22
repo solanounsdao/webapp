@@ -3,80 +3,80 @@ import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-900 dark:bg-black text-white py-16">
+    <footer className="bg-gray-900 dark:bg-black text-white py-12 sm:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="space-y-4">
-            <div className="text-2xl font-bold">Solanouns</div>
-            <p className="text-gray-400 dark:text-gray-500">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <div className="space-y-4 sm:col-span-2 lg:col-span-1">
+            <div className="text-xl sm:text-2xl font-bold">Solanouns</div>
+            <p className="text-gray-400 dark:text-gray-500 text-sm sm:text-base">
               A generative avatar art collective on Solana. 2,222 unique digital collectibles.
             </p>
             <div className="flex space-x-4">
-              <a href="https://x.com/solanouns" className="text-gray-400 dark:text-gray-500 hover:text-solana-purple transition-colors">
+              <a href="https://x.com/solanouns" className="text-gray-400 dark:text-gray-500 hover:text-solana-purple transition-colors text-sm sm:text-base">
                 🐦 Twitter
               </a>
-              <a href="https://mee6.xyz/i/37plYwmYJY " className="text-gray-400 dark:text-gray-500 hover:text-solana-purple transition-colors">
+              <a href="https://mee6.xyz/i/37plYwmYJY " className="text-gray-400 dark:text-gray-500 hover:text-solana-purple transition-colors text-sm sm:text-base">
                 💬 Discord
               </a>
             </div>
           </div>
           
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold">Project</h4>
+            <h4 className="text-base sm:text-lg font-semibold">Project</h4>
             <div className="space-y-2">
-              <a href="#about" className="block text-gray-400 dark:text-gray-500 hover:text-white transition-colors">
+              <a href="#about" className="block text-gray-400 dark:text-gray-500 hover:text-white transition-colors text-sm sm:text-base">
                 About
               </a>
-              <a href="#community" className="block text-gray-400 dark:text-gray-500 hover:text-white transition-colors">
+              <a href="#community" className="block text-gray-400 dark:text-gray-500 hover:text-white transition-colors text-sm sm:text-base">
                 Roadmap
               </a>
-              <Link to="/docs" className="block text-gray-400 dark:text-gray-500 hover:text-white transition-colors">
+              <Link to="/docs" className="block text-gray-400 dark:text-gray-500 hover:text-white transition-colors text-sm sm:text-base">
                 Documentation
               </Link>
             </div>
           </div>
           
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold">Community</h4>
+            <h4 className="text-base sm:text-lg font-semibold">Community</h4>
             <div className="space-y-2">
-              <a href="#" className="block text-gray-400 dark:text-gray-500 hover:text-white transition-colors">
+              <a href="#" className="block text-gray-400 dark:text-gray-500 hover:text-white transition-colors text-sm sm:text-base">
                 Governance
               </a>
-              <a href="#" className="block text-gray-400 dark:text-gray-500 hover:text-white transition-colors">
+              <a href="#" className="block text-gray-400 dark:text-gray-500 hover:text-white transition-colors text-sm sm:text-base">
                 Proposals
               </a>
-              <a href="#" className="block text-gray-400 dark:text-gray-500 hover:text-white transition-colors">
+              <a href="#" className="block text-gray-400 dark:text-gray-500 hover:text-white transition-colors text-sm sm:text-base">
                 Treasury
               </a>
             </div>
           </div>
           
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold">Resources</h4>
+            <h4 className="text-base sm:text-lg font-semibold">Resources</h4>
             <div className="space-y-2">
-              <Link to="/docs" className="block text-gray-400 dark:text-gray-500 hover:text-white transition-colors">
+              <Link to="/docs" className="block text-gray-400 dark:text-gray-500 hover:text-white transition-colors text-sm sm:text-base">
                 Documentation
               </Link>
-              <Link to="/brand-kit" className="block text-gray-400 dark:text-gray-500 hover:text-white transition-colors">
+              <Link to="/brand-kit" className="block text-gray-400 dark:text-gray-500 hover:text-white transition-colors text-sm sm:text-base">
                 Brand Kit
               </Link>
-              <Link to="/developer-tools" className="block text-gray-400 dark:text-gray-500 hover:text-white transition-colors">
+              <Link to="/developer-tools" className="block text-gray-400 dark:text-gray-500 hover:text-white transition-colors text-sm sm:text-base">
                 Developer Tools
               </Link>
             </div>
           </div>
         </div>
         
-        <div className="border-t border-gray-800 dark:border-gray-700 mt-12 pt-8 transition-colors duration-300">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 dark:text-gray-500 transition-colors duration-300">
+        <div className="border-t border-gray-800 dark:border-gray-700 mt-8 sm:mt-12 pt-6 sm:pt-8 transition-colors duration-300">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <p className="text-gray-400 dark:text-gray-500 transition-colors duration-300 text-sm sm:text-base text-center md:text-left">
               © 2024 Solanouns. Built with ❤️ on Solana.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link to="/privacy-policy" className="text-gray-400 dark:text-gray-500 hover:text-white transition-colors">
+            <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-6">
+              <Link to="/privacy-policy" className="text-gray-400 dark:text-gray-500 hover:text-white transition-colors text-sm sm:text-base text-center">
                 Privacy Policy
               </Link>
-              <Link to="/terms-of-service" className="text-gray-400 dark:text-gray-500 hover:text-white transition-colors">
+              <Link to="/terms-of-service" className="text-gray-400 dark:text-gray-500 hover:text-white transition-colors text-sm sm:text-base text-center">
                 Terms of Service
               </Link>
             </div>

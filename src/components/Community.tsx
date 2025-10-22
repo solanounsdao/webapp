@@ -5,56 +5,56 @@ const Community: React.FC = () => {
     <section id="community" className="py-20 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        <div className="text-center mb-12 lg:mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Join the Community
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-4">
             Connect with fellow Solanouns holders, participate in governance,
             and shape the future of our ecosystem
           </p>
         </div>
 
         {/* Community Stats */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          <div className="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl">
-            <div className="text-3xl font-bold text-solana-purple mb-2">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-12 lg:mb-16">
+          <div className="text-center p-4 sm:p-6 bg-gray-50 dark:bg-gray-800 rounded-xl">
+            <div className="text-2xl sm:text-3xl font-bold text-solana-purple mb-2">
               2,222
             </div>
-            <div className="text-gray-600 dark:text-gray-400">Max Supply</div>
+            <div className="text-sm sm:text-base text-gray-600 dark:text-gray-400">Max Supply</div>
           </div>
-          <div className="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl">
-            <div className="text-3xl font-bold text-solana-green mb-2">0</div>
-            <div className="text-gray-600 dark:text-gray-400">Holders</div>
+          <div className="text-center p-4 sm:p-6 bg-gray-50 dark:bg-gray-800 rounded-xl">
+            <div className="text-2xl sm:text-3xl font-bold text-solana-green mb-2">0</div>
+            <div className="text-sm sm:text-base text-gray-600 dark:text-gray-400">Holders</div>
           </div>
-          <div className="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl">
-            <div className="text-3xl font-bold text-purple-500 mb-2">0</div>
-            <div className="text-gray-600 dark:text-gray-400">Proposals</div>
+          <div className="text-center p-4 sm:p-6 bg-gray-50 dark:bg-gray-800 rounded-xl">
+            <div className="text-2xl sm:text-3xl font-bold text-purple-500 mb-2">0</div>
+            <div className="text-sm sm:text-base text-gray-600 dark:text-gray-400">Proposals</div>
           </div>
-          <div className="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl">
-            <div className="text-3xl font-bold text-blue-500 mb-2">0</div>
-            <div className="text-gray-600 dark:text-gray-400">Stakers</div>
+          <div className="text-center p-4 sm:p-6 bg-gray-50 dark:bg-gray-800 rounded-xl">
+            <div className="text-2xl sm:text-3xl font-bold text-blue-500 mb-2">0</div>
+            <div className="text-sm sm:text-base text-gray-600 dark:text-gray-400">Stakers</div>
           </div>
         </div>
 
         {/* Social Platforms */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-12 lg:mb-16">
           {/* Discord */}
-          <div className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-            <div className="flex items-center space-x-4 mb-4">
-              <div className="w-12 h-12 bg-indigo-500 rounded-lg flex items-center justify-center">
-                <span className="text-white text-xl">💬</span>
+          <div className="bg-white dark:bg-gray-700 p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+            <div className="flex items-center space-x-3 sm:space-x-4 mb-3 sm:mb-4">
+              <div className="w-10 sm:w-12 h-10 sm:h-12 bg-indigo-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                <span className="text-white text-lg sm:text-xl">💬</span>
               </div>
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+              <div className="min-w-0">
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white">
                   Discord
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400">
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400">
                   Join our community chat
                 </p>
               </div>
             </div>
-            <p className="text-gray-600 dark:text-gray-300 mb-6">
+            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4 sm:mb-6">
               Connect with other holders, participate in discussions, and get
               the latest updates from the team.
             </p>
@@ -62,7 +62,7 @@ const Community: React.FC = () => {
               href="https://mee6.xyz/i/37plYwmYJY"
               target="_blank"
               rel="noopener noreferrer"
-              className="block bg-indigo-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-600 transition-colors w-full text-center"
+              className="block bg-indigo-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold hover:bg-indigo-600 transition-colors w-full text-center text-sm sm:text-base"
             >
               Join Discord
             </a>
