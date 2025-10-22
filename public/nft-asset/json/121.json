@@ -15,15 +15,15 @@
     },
     {
       "trait_type": "Body",
-      "value": "Body 3"
+      "value": "Body 8"
     },
     {
       "trait_type": "Accessories",
-      "value": "Accessories 29"
+      "value": "Accessories 44"
     },
     {
       "trait_type": "Glasses",
-      "value": "Glasses 18"
+      "value": "Glasses 15"
     }
   ],
   "compiler": "The thirdweb Art Engine"

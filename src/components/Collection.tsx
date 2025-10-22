@@ -124,32 +124,6 @@ const Collection: React.FC = () => {
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              
-              <div className="p-4 sm:p-5 lg:p-6">
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2 truncate">
-                  {nft.name}
-                </h3>
-                
-                <div className="space-y-2 sm:space-y-3">
-                  <h4 className="font-semibold text-gray-900 dark:text-white text-xs sm:text-sm">Traits:</h4>
-                  <div className="flex flex-wrap gap-1.5 sm:gap-2">
-                    {nft.attributes.slice(0, 3).map((attr, attrIndex) => (
-                      <span 
-                        key={attrIndex}
-                        className="bg-solana-purple/10 text-solana-purple px-2 py-1 rounded-md text-xs font-medium truncate max-w-full"
-                      >
-                        {attr.value}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                <div className="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-gray-200 dark:border-gray-600">
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm">Edition</span>
-                    <span className="font-bold text-solana-purple text-sm sm:text-base">#{nft.edition}</span>
-                  </div>
-                </div>
-              </div>
             </div>
           ))}
         </div>

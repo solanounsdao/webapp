@@ -7,23 +7,23 @@
   "attributes": [
     {
       "trait_type": "Background",
-      "value": "Background 6"
+      "value": "Background 5"
     },
     {
       "trait_type": "Head",
-      "value": "Head 40"
+      "value": "Head 19"
     },
     {
       "trait_type": "Body",
-      "value": "Body 7"
+      "value": "Body 2"
     },
     {
       "trait_type": "Accessories",
-      "value": "Accessories 27"
+      "value": "Accessories 75"
     },
     {
       "trait_type": "Glasses",
-      "value": "Glasses 7"
+      "value": "Glasses 6"
     }
   ],
   "compiler": "The thirdweb Art Engine"

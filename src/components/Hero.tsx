@@ -56,12 +56,16 @@ const Hero: React.FC = () => {
     }
   };
 
+  const scrollToNextSection = () => {
+    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   useEffect(() => {
     loadRandomNFT();
   }, []);
 
   return (
-    <section className="pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+    <section className="pt-24 pb-20 px-4 sm:px-6 lg:px-8 relative">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
@@ -113,22 +117,34 @@ const Hero: React.FC = () => {
                   🎲
                 </button>
               </div>
-              <div className="mt-6 space-y-2">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                  {featuredNFT ? featuredNFT.name : 'Loading...'}
-                </h3>
-                <div className="space-y-2">
-                  {featuredNFT && featuredNFT.attributes.slice(0, 5).map((trait, index) => (
-                    <div key={index} className="flex justify-between items-center">
-                      <span className="text-gray-600 dark:text-gray-400">{trait.trait_type}</span>
-                      <span className="font-bold text-solana-purple">{trait.value}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
             </div>
           </div>
         </div>
+      </div>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      {/* Scroll Down Button */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+        <button
+          onClick={scrollToNextSection}
+          className="group flex flex-col items-center space-y-2 text-gray-600 dark:text-gray-400 hover:text-solana-purple dark:hover:text-solana-purple transition-colors"
+          aria-label="Scroll to next section"
+        >
+          <span className="text-sm font-medium">Explore</span>
+          <div className="w-6 h-10 border-2 border-current rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-current rounded-full animate-bounce mt-2"></div>
+          </div>
+          <svg 
+            className="w-6 h-6 transform group-hover:translate-y-1 transition-transform" 
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
+        </button>
       </div>
     </section>
   );

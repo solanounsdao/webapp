@@ -7,11 +7,11 @@
   "attributes": [
     {
       "trait_type": "Background",
-      "value": "Background 7"
+      "value": "Background 8"
     },
     {
       "trait_type": "Head",
-      "value": "Head 18"
+      "value": "Head 99"
     },
     {
       "trait_type": "Body",
@@ -19,7 +19,7 @@
     },
     {
       "trait_type": "Accessories",
-      "value": "Accessories 13"
+      "value": "Accessories 26"
     },
     {
       "trait_type": "Glasses",

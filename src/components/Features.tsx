@@ -77,7 +77,6 @@ const Features: React.FC = () => {
                   <div key={nft.id} className="w-10 h-10 rounded-full border-2 border-white dark:border-gray-800 overflow-hidden">
                     <img 
                       src={nft.imageUrl} 
-                      alt={nft.name}
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -105,13 +104,9 @@ const Features: React.FC = () => {
                 <div className="aspect-square rounded-lg overflow-hidden">
                   <img 
                     src={nft.imageUrl} 
-                    alt={nft.name}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <p className="text-xs text-center text-gray-600 dark:text-gray-400 mt-2 truncate">
-                  {nft.name}
-                </p>
               </div>
             ))}
             

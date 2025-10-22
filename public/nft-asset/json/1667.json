@@ -11,19 +11,19 @@
     },
     {
       "trait_type": "Head",
-      "value": "Head 115"
+      "value": "Head 28"
     },
     {
       "trait_type": "Body",
-      "value": "Body 5"
+      "value": "Body 7"
     },
     {
       "trait_type": "Accessories",
-      "value": "Accessories 89"
+      "value": "Accessories 90"
     },
     {
       "trait_type": "Glasses",
-      "value": "Glasses 4"
+      "value": "Glasses 13"
     }
   ],
   "compiler": "The thirdweb Art Engine"
