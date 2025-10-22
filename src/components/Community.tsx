@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Community: React.FC = () => {
   return (
@@ -10,14 +10,17 @@ const Community: React.FC = () => {
             Join the Community
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Connect with fellow Solanouns holders, participate in governance, and shape the future of our ecosystem
+            Connect with fellow Solanouns holders, participate in governance,
+            and shape the future of our ecosystem
           </p>
         </div>
 
         {/* Community Stats */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           <div className="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl">
-            <div className="text-3xl font-bold text-solana-purple mb-2">2,222</div>
+            <div className="text-3xl font-bold text-solana-purple mb-2">
+              2,222
+            </div>
             <div className="text-gray-600 dark:text-gray-400">Max Supply</div>
           </div>
           <div className="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl">
@@ -43,16 +46,21 @@ const Community: React.FC = () => {
                 <span className="text-white text-xl">💬</span>
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Discord</h3>
-                <p className="text-gray-600 dark:text-gray-400">Join our community chat</p>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                  Discord
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Join our community chat
+                </p>
               </div>
             </div>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              Connect with other holders, participate in discussions, and get the latest updates from the team.
+              Connect with other holders, participate in discussions, and get
+              the latest updates from the team.
             </p>
-            <a 
-              href="https://mee6.xyz/i/37plYwmYJY" 
-              target="_blank" 
+            <a
+              href="https://mee6.xyz/i/37plYwmYJY"
+              target="_blank"
               rel="noopener noreferrer"
               className="block bg-indigo-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-600 transition-colors w-full text-center"
             >
@@ -67,16 +75,21 @@ const Community: React.FC = () => {
                 <span className="text-white text-xl">🐦</span>
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">X (Twitter)</h3>
-                <p className="text-gray-600 dark:text-gray-400">Follow for updates</p>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                  X (Twitter)
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Follow for updates
+                </p>
               </div>
             </div>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              Stay updated with announcements, community highlights, and governance proposals.
+              Stay updated with announcements, community highlights, and
+              governance proposals.
             </p>
-            <a 
-              href="https://x.com/solanouns" 
-              target="_blank" 
+            <a
+              href="https://x.com/solanouns"
+              target="_blank"
               rel="noopener noreferrer"
               className="block bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors w-full text-center"
             >
@@ -87,22 +100,27 @@ const Community: React.FC = () => {
           {/* X Community */}
           <div className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
             <div className="flex items-center space-x-4 mb-4">
-              <div className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center">
-                <span className="text-white text-xl">🏘️</span>
+              <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center">
+                <span className="text-white text-xl">🐦</span>
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">X Community</h3>
-                <p className="text-gray-600 dark:text-gray-400">Join our X community</p>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                  X Community
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Join our X community
+                </p>
               </div>
             </div>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              Connect with fellow holders in our dedicated X community space for deeper conversations.
+              Connect with fellow holders in our dedicated X community space for
+              deeper conversations.
             </p>
-            <a 
-              href="https://x.com/i/communities/1980997471804473638" 
-              target="_blank" 
+            <a
+              href="https://x.com/i/communities/1980997471804473638"
+              target="_blank"
               rel="noopener noreferrer"
-              className="block bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-900 transition-colors w-full text-center"
+              className="block bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors w-full text-center"
             >
               Join Community
             </a>
@@ -115,14 +133,19 @@ const Community: React.FC = () => {
                 <span className="text-white text-xl">🏛️</span>
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">DAO Forum</h3>
-                <p className="text-gray-600 dark:text-gray-400">Governance hub</p>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                  DAO Forum
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Governance hub
+                </p>
               </div>
             </div>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              Participate in governance discussions and vote on proposals that shape our future.
+              Participate in governance discussions and vote on proposals that
+              shape our future.
             </p>
-            <br/>
+            <br />
             <button className="bg-solana-purple text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors w-full">
               Visit Forum
             </button>
@@ -136,7 +159,8 @@ const Community: React.FC = () => {
               What You Get as a Holder
             </h3>
             <p className="text-xl text-gray-600 dark:text-gray-300">
-              Owning a Solanouns NFT gives you access to exclusive community benefits
+              Owning a Solanouns NFT gives you access to exclusive community
+              benefits
             </p>
           </div>
 
@@ -145,7 +169,9 @@ const Community: React.FC = () => {
               <div className="w-16 h-16 bg-solana-purple rounded-full flex items-center justify-center mx-auto">
                 <span className="text-2xl text-white">🗳️</span>
               </div>
-              <h4 className="text-xl font-semibold text-gray-900 dark:text-white">Voting Rights</h4>
+              <h4 className="text-xl font-semibold text-gray-900 dark:text-white">
+                Voting Rights
+              </h4>
               <p className="text-gray-600 dark:text-gray-300">
                 Vote on proposals and influence the direction of the project
               </p>
@@ -155,7 +181,9 @@ const Community: React.FC = () => {
               <div className="w-16 h-16 bg-solana-green rounded-full flex items-center justify-center mx-auto">
                 <span className="text-2xl text-white">💰</span>
               </div>
-              <h4 className="text-xl font-semibold text-gray-900 dark:text-white">Treasury Access</h4>
+              <h4 className="text-xl font-semibold text-gray-900 dark:text-white">
+                Treasury Access
+              </h4>
               <p className="text-gray-600 dark:text-gray-300">
                 Benefit from community treasury distributions and rewards
               </p>
@@ -165,7 +193,9 @@ const Community: React.FC = () => {
               <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto">
                 <span className="text-2xl text-white">🎨</span>
               </div>
-              <h4 className="text-xl font-semibold text-gray-900 dark:text-white">Exclusive Content</h4>
+              <h4 className="text-xl font-semibold text-gray-900 dark:text-white">
+                Exclusive Content
+              </h4>
               <p className="text-gray-600 dark:text-gray-300">
                 Access to holder-only channels, events, and future drops
               </p>
@@ -192,22 +222,32 @@ const Community: React.FC = () => {
                   <span className="text-white font-bold">✓</span>
                 </div>
                 <div>
-                  <h4 className="text-2xl font-bold text-gray-900 dark:text-white">Phase 1: Launch</h4>
-                  <p className="text-gray-600 dark:text-gray-400">Completed - Q4 2024</p>
+                  <h4 className="text-2xl font-bold text-gray-900 dark:text-white">
+                    Phase 1: Launch
+                  </h4>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Completed - Q4 2024
+                  </p>
                 </div>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div className="flex items-center space-x-2">
                   <span className="text-solana-green">✓</span>
-                  <span className="text-gray-700 dark:text-gray-300">2,222 NFT Collection Launch</span>
+                  <span className="text-gray-700 dark:text-gray-300">
+                    2,222 NFT Collection Launch
+                  </span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <span className="text-solana-green">✓</span>
-                  <span className="text-gray-700 dark:text-gray-300">Website & Community Setup</span>
+                  <span className="text-gray-700 dark:text-gray-300">
+                    Website & Community Setup
+                  </span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <span className="text-solana-green">✓</span>
-                  <span className="text-gray-700 dark:text-gray-300">Discord & Social Channels</span>
+                  <span className="text-gray-700 dark:text-gray-300">
+                    Discord & Social Channels
+                  </span>
                 </div>
               </div>
             </div>
@@ -219,22 +259,32 @@ const Community: React.FC = () => {
                   <span className="text-white font-bold">2</span>
                 </div>
                 <div>
-                  <h4 className="text-2xl font-bold text-gray-900 dark:text-white">Phase 2: DAO & Governance</h4>
-                  <p className="text-gray-600 dark:text-gray-400">In Progress - Q1 2025</p>
+                  <h4 className="text-2xl font-bold text-gray-900 dark:text-white">
+                    Phase 2: DAO & Governance
+                  </h4>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    In Progress - Q1 2025
+                  </p>
                 </div>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div className="flex items-center space-x-2">
                   <span className="text-solana-purple">⏳</span>
-                  <span className="text-gray-700 dark:text-gray-300">DAO Governance System</span>
+                  <span className="text-gray-700 dark:text-gray-300">
+                    DAO Governance System
+                  </span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <span className="text-solana-purple">⏳</span>
-                  <span className="text-gray-700 dark:text-gray-300">Treasury Management</span>
+                  <span className="text-gray-700 dark:text-gray-300">
+                    Treasury Management
+                  </span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <span className="text-solana-purple">⏳</span>
-                  <span className="text-gray-700 dark:text-gray-300">Proposal Voting Platform</span>
+                  <span className="text-gray-700 dark:text-gray-300">
+                    Proposal Voting Platform
+                  </span>
                 </div>
               </div>
             </div>
@@ -246,22 +296,32 @@ const Community: React.FC = () => {
                   <span className="text-white font-bold">3</span>
                 </div>
                 <div>
-                  <h4 className="text-2xl font-bold text-gray-900 dark:text-white">Phase 3: Expansion</h4>
-                  <p className="text-gray-600 dark:text-gray-400">Planned - Q2 2025</p>
+                  <h4 className="text-2xl font-bold text-gray-900 dark:text-white">
+                    Phase 3: Expansion
+                  </h4>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Planned - Q2 2025
+                  </p>
                 </div>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div className="flex items-center space-x-2">
                   <span className="text-gray-400">○</span>
-                  <span className="text-gray-700 dark:text-gray-300">Staking Rewards</span>
+                  <span className="text-gray-700 dark:text-gray-300">
+                    Staking Rewards
+                  </span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <span className="text-gray-400">○</span>
-                  <span className="text-gray-700 dark:text-gray-300">Utility Token Launch</span>
+                  <span className="text-gray-700 dark:text-gray-300">
+                    Utility Token Launch
+                  </span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <span className="text-gray-400">○</span>
-                  <span className="text-gray-700 dark:text-gray-300">Partnerships & Integrations</span>
+                  <span className="text-gray-700 dark:text-gray-300">
+                    Partnerships & Integrations
+                  </span>
                 </div>
               </div>
             </div>

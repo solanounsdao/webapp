@@ -5,6 +5,8 @@ import HomePage from './components/HomePage';
 import Docs from './components/Docs';
 import BrandKit from './components/BrandKit';
 import DeveloperTools from './components/DeveloperTools';
+import PrivacyPolicy from './components/PrivacyPolicy';
+import TermsOfService from './components/TermsOfService';
 import Footer from './components/Footer';
 
 function App() {
@@ -18,6 +20,8 @@ function App() {
             <Route path="/docs" element={<Docs />} />
             <Route path="/brand-kit" element={<BrandKit />} />
             <Route path="/developer-tools" element={<DeveloperTools />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
           </Routes>
           <Footer />
         </div>

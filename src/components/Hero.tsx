@@ -89,7 +89,8 @@ const Hero: React.FC = () => {
               >
                 View Collection
               </button>
-              <button className="border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-8 py-4 rounded-xl font-semibold hover:border-solana-purple hover:text-solana-purple transition-colors">
+              <button className="border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-8 py-4 rounded-xl font-semibold hover:border-solana-purple hover:text-solana-purple transition-colors"
+              onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}>
                 Learn More
               </button>
             </div>
