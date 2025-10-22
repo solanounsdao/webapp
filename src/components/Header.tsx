@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTheme } from '../contexts/ThemeContext';
 
 const Header: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
   const location = useLocation();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
     if (location.pathname !== '/') {
@@ -69,8 +70,75 @@ const Header: React.FC = () => {
             >
               {theme === 'dark' ? '☀️' : '🌙'}
             </button>
+            
+            {/* Mobile menu button */}
+            <button
+              className="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle mobile menu"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
+              </svg>
+            </button>
           </div>
         </div>
+        
+        {/* Mobile menu */}
+        {isMenuOpen && (
+          <div className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+            <div className="px-4 py-3 space-y-3">
+              <button 
+                onClick={() => {
+                  scrollToSection('about');
+                  setIsMenuOpen(false);
+                }}
+                className="block w-full text-left text-gray-700 dark:text-gray-300 hover:text-solana-purple transition-colors"
+              >
+                About
+              </button>
+              <button 
+                onClick={() => {
+                  scrollToSection('collection');
+                  setIsMenuOpen(false);
+                }}
+                className="block w-full text-left text-gray-700 dark:text-gray-300 hover:text-solana-purple transition-colors"
+              >
+                Collection
+              </button>
+              <button 
+                onClick={() => {
+                  scrollToSection('community');
+                  setIsMenuOpen(false);
+                }}
+                className="block w-full text-left text-gray-700 dark:text-gray-300 hover:text-solana-purple transition-colors"
+              >
+                Community
+              </button>
+              <Link 
+                to="/docs" 
+                onClick={() => setIsMenuOpen(false)}
+                className="block w-full text-left text-gray-700 dark:text-gray-300 hover:text-solana-purple transition-colors"
+              >
+                Docs
+              </Link>
+              <Link 
+                to="/brand-kit" 
+                onClick={() => setIsMenuOpen(false)}
+                className="block w-full text-left text-gray-700 dark:text-gray-300 hover:text-solana-purple transition-colors"
+              >
+                Brand Kit
+              </Link>
+              <Link 
+                to="/developer-tools" 
+                onClick={() => setIsMenuOpen(false)}
+                className="block w-full text-left text-gray-700 dark:text-gray-300 hover:text-solana-purple transition-colors"
+              >
+                Dev Tools
+              </Link>
+            </div>
+          </div>
+        )}
       </div>
     </header>
   );

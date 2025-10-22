@@ -35,7 +35,7 @@ const Community: React.FC = () => {
         </div>
 
         {/* Social Platforms */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {/* Discord */}
           <div className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
             <div className="flex items-center space-x-4 mb-4">
@@ -50,9 +50,14 @@ const Community: React.FC = () => {
             <p className="text-gray-600 dark:text-gray-300 mb-6">
               Connect with other holders, participate in discussions, and get the latest updates from the team.
             </p>
-            <button className="bg-indigo-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-600 transition-colors w-full">
+            <a 
+              href="https://mee6.xyz/i/37plYwmYJY" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="block bg-indigo-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-600 transition-colors w-full text-center"
+            >
               Join Discord
-            </button>
+            </a>
           </div>
 
           {/* Twitter */}
@@ -62,20 +67,49 @@ const Community: React.FC = () => {
                 <span className="text-white text-xl">🐦</span>
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Twitter</h3>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">X (Twitter)</h3>
                 <p className="text-gray-600 dark:text-gray-400">Follow for updates</p>
               </div>
             </div>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
               Stay updated with announcements, community highlights, and governance proposals.
             </p>
-            <button className="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors w-full">
-              Follow Twitter
-            </button>
+            <a 
+              href="https://x.com/solanouns" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="block bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors w-full text-center"
+            >
+              Follow X
+            </a>
+          </div>
+
+          {/* X Community */}
+          <div className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+            <div className="flex items-center space-x-4 mb-4">
+              <div className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center">
+                <span className="text-white text-xl">🏘️</span>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">X Community</h3>
+                <p className="text-gray-600 dark:text-gray-400">Join our X community</p>
+              </div>
+            </div>
+            <p className="text-gray-600 dark:text-gray-300 mb-6">
+              Connect with fellow holders in our dedicated X community space for deeper conversations.
+            </p>
+            <a 
+              href="https://x.com/i/communities/1980997471804473638" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="block bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-900 transition-colors w-full text-center"
+            >
+              Join Community
+            </a>
           </div>
 
           {/* DAO Forum */}
-          <div className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 md:col-span-2 lg:col-span-1">
+          <div className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
             <div className="flex items-center space-x-4 mb-4">
               <div className="w-12 h-12 bg-solana-purple rounded-lg flex items-center justify-center">
                 <span className="text-white text-xl">🏛️</span>

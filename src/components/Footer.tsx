@@ -12,10 +12,10 @@ const Footer: React.FC = () => {
               A generative avatar art collective on Solana. 2,222 unique digital collectibles.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 dark:text-gray-500 hover:text-solana-purple transition-colors">
+              <a href="https://x.com/solanouns" className="text-gray-400 dark:text-gray-500 hover:text-solana-purple transition-colors">
                 🐦 Twitter
               </a>
-              <a href="#" className="text-gray-400 dark:text-gray-500 hover:text-solana-purple transition-colors">
+              <a href="https://mee6.xyz/i/37plYwmYJY " className="text-gray-400 dark:text-gray-500 hover:text-solana-purple transition-colors">
                 💬 Discord
               </a>
             </div>
@@ -54,15 +54,15 @@ const Footer: React.FC = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Resources</h4>
             <div className="space-y-2">
-              <a href="#" className="block text-gray-400 dark:text-gray-500 hover:text-white transition-colors">
+              <Link to="/docs" className="block text-gray-400 dark:text-gray-500 hover:text-white transition-colors">
                 Documentation
-              </a>
-              <a href="#" className="block text-gray-400 dark:text-gray-500 hover:text-white transition-colors">
+              </Link>
+              <Link to="/brand-kit" className="block text-gray-400 dark:text-gray-500 hover:text-white transition-colors">
                 Brand Kit
-              </a>
-              <a href="#" className="block text-gray-400 dark:text-gray-500 hover:text-white transition-colors">
+              </Link>
+              <Link to="/developer-tools" className="block text-gray-400 dark:text-gray-500 hover:text-white transition-colors">
                 Developer Tools
-              </a>
+              </Link>
             </div>
           </div>
         </div>

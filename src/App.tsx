@@ -3,6 +3,8 @@ import { ThemeProvider } from './contexts/ThemeContext';
 import Header from './components/Header';
 import HomePage from './components/HomePage';
 import Docs from './components/Docs';
+import BrandKit from './components/BrandKit';
+import DeveloperTools from './components/DeveloperTools';
 import Footer from './components/Footer';
 
 function App() {
@@ -14,6 +16,8 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/docs" element={<Docs />} />
+            <Route path="/brand-kit" element={<BrandKit />} />
+            <Route path="/developer-tools" element={<DeveloperTools />} />
           </Routes>
           <Footer />
         </div>
