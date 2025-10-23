@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 interface FeaturedNFT {
   name: string;
@@ -89,6 +90,12 @@ const Hero: React.FC = () => {
               >
                 View Collection
               </button>
+              <Link 
+                to="/playground"
+                className="bg-solana-green text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold hover:bg-green-600 transition-all transform hover:scale-105 w-full sm:w-auto text-center inline-block"
+              >
+                🎨 Create PFP
+              </Link>
               <button className="border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold hover:border-solana-purple hover:text-solana-purple transition-colors w-full sm:w-auto"
               onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}>
                 Learn More

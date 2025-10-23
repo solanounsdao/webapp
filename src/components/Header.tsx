@@ -56,10 +56,10 @@ const Header: React.FC = () => {
               Community
             </button>
             <Link 
-              to="/docs" 
+              to="/playground" 
               className="text-gray-700 dark:text-gray-300 hover:text-solana-purple transition-colors"
             >
-              Docs
+              Playground
             </Link>
           </nav>
 
@@ -117,11 +117,11 @@ const Header: React.FC = () => {
                 Community
               </button>
               <Link 
-                to="/docs" 
+                to="/playground" 
                 onClick={() => setIsMenuOpen(false)}
                 className="block w-full text-left text-gray-700 dark:text-gray-300 hover:text-solana-purple transition-colors"
               >
-                Docs
+                Playground
               </Link>
             </div>
           </div>
