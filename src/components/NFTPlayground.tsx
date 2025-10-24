@@ -19,8 +19,8 @@ interface SelectedTraits {
   background: number;
   head: number;
   body: number;
-  accessories: number | null;
-  glasses: number | null;
+  accessories: number;
+  glasses: number;
 }
 
 const NFTPlayground: React.FC = () => {
@@ -36,8 +36,8 @@ const NFTPlayground: React.FC = () => {
     background: 1,
     head: 1,
     body: 1,
-    accessories: null,
-    glasses: null
+    accessories: 1,
+    glasses: 1
   });
 
   const [loading, setLoading] = useState(true);
@@ -85,18 +85,20 @@ const NFTPlayground: React.FC = () => {
       background: Math.floor(Math.random() * traits.background.length) + 1,
       head: Math.floor(Math.random() * traits.head.length) + 1,
       body: Math.floor(Math.random() * traits.body.length) + 1,
-      accessories: Math.random() > 0.3 ? Math.floor(Math.random() * traits.accessories.length) + 1 : null,
-      glasses: Math.random() > 0.3 ? Math.floor(Math.random() * traits.glasses.length) + 1 : null
+      accessories: Math.floor(Math.random() * traits.accessories.length) + 1,
+      glasses: Math.floor(Math.random() * traits.glasses.length) + 1
     };
     setSelectedTraits(randomTraits);
   };
 
-  const clearOptionalTraits = () => {
-    setSelectedTraits(prev => ({
-      ...prev,
-      accessories: null,
-      glasses: null
-    }));
+  const resetToDefaults = () => {
+    setSelectedTraits({
+      background: 1,
+      head: 1,
+      body: 1,
+      accessories: 1,
+      glasses: 1
+    });
   };
 
   const downloadNFT = async () => {
@@ -190,36 +192,32 @@ const NFTPlayground: React.FC = () => {
                 )}
                 
                 {/* Accessories Layer */}
-                {selectedTraits.accessories && (
-                  <img
-                    src={`/layers/Accessories/Accessories ${selectedTraits.accessories}.png`}
-                    alt="Accessories"
-                    className="absolute inset-0 w-full h-full"
-                    style={{ 
-                      imageRendering: 'pixelated',
-                      objectFit: 'contain',
-                      objectPosition: 'center'
-                    }}
-                    loading="eager"
-                    decoding="sync"
-                  />
-                )}
+                <img
+                  src={`/layers/Accessories/Accessories ${selectedTraits.accessories}.png`}
+                  alt="Accessories"
+                  className="absolute inset-0 w-full h-full"
+                  style={{ 
+                    imageRendering: 'pixelated',
+                    objectFit: 'contain',
+                    objectPosition: 'center'
+                  }}
+                  loading="eager"
+                  decoding="sync"
+                />
                 
                 {/* Glasses Layer */}
-                {selectedTraits.glasses && (
-                  <img
-                    src={`/layers/Glasses/Glasses ${selectedTraits.glasses}.png`}
-                    alt="Glasses"
-                    className="absolute inset-0 w-full h-full"
-                    style={{ 
-                      imageRendering: 'pixelated',
-                      objectFit: 'contain',
-                      objectPosition: 'center'
-                    }}
-                    loading="eager"
-                    decoding="sync"
-                  />
-                )}
+                <img
+                  src={`/layers/Glasses/Glasses ${selectedTraits.glasses}.png`}
+                  alt="Glasses"
+                  className="absolute inset-0 w-full h-full"
+                  style={{ 
+                    imageRendering: 'pixelated',
+                    objectFit: 'contain',
+                    objectPosition: 'center'
+                  }}
+                  loading="eager"
+                  decoding="sync"
+                />
               </div>
 
               {/* Action Buttons */}
@@ -233,11 +231,11 @@ const NFTPlayground: React.FC = () => {
                 </button>
                 
                 <button
-                  onClick={clearOptionalTraits}
+                  onClick={resetToDefaults}
                   className="w-full bg-gray-500 text-white px-4 py-3 rounded-lg font-semibold hover:bg-gray-600 transition-colors flex items-center justify-center space-x-2"
                 >
-                  <span>🧹</span>
-                  <span>Clear Optional</span>
+                  <span>🔄</span>
+                  <span>Reset to Defaults</span>
                 </button>
                 
                 <button
@@ -256,8 +254,8 @@ const NFTPlayground: React.FC = () => {
                   <div>Background: {selectedTraits.background}</div>
                   <div>Head: {selectedTraits.head}</div>
                   <div>Body: {selectedTraits.body}</div>
-                  <div>Accessories: {selectedTraits.accessories || 'None'}</div>
-                  <div>Glasses: {selectedTraits.glasses || 'None'}</div>
+                  <div>Accessories: {selectedTraits.accessories}</div>
+                  <div>Glasses: {selectedTraits.glasses}</div>
                 </div>
               </div>
             </div>
@@ -367,20 +365,8 @@ const NFTPlayground: React.FC = () => {
               <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center space-x-2">
                   <span>🎩</span>
-                  <span>Accessories ({traits.accessories.length} options - Optional)</span>
+                  <span>Accessories ({traits.accessories.length} options)</span>
                 </h3>
-                <div className="mb-4">
-                  <button
-                    onClick={() => setSelectedTraits(prev => ({ ...prev, accessories: null }))}
-                    className={`px-4 py-2 rounded-lg border-2 transition-all ${
-                      selectedTraits.accessories === null
-                        ? 'border-solana-purple bg-solana-purple text-white'
-                        : 'border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-solana-purple'
-                    }`}
-                  >
-                    None
-                  </button>
-                </div>
                 <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-8 gap-3 max-h-64 overflow-y-auto">
                   {traits.accessories.map((trait) => (
                     <button
@@ -411,20 +397,8 @@ const NFTPlayground: React.FC = () => {
               <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center space-x-2">
                   <span>🕶️</span>
-                  <span>Glasses ({traits.glasses.length} options - Optional)</span>
+                  <span>Glasses ({traits.glasses.length} options)</span>
                 </h3>
-                <div className="mb-4">
-                  <button
-                    onClick={() => setSelectedTraits(prev => ({ ...prev, glasses: null }))}
-                    className={`px-4 py-2 rounded-lg border-2 transition-all ${
-                      selectedTraits.glasses === null
-                        ? 'border-solana-purple bg-solana-purple text-white'
-                        : 'border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-solana-purple'
-                    }`}
-                  >
-                    None
-                  </button>
-                </div>
                 <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-3">
                   {traits.glasses.map((trait) => (
                     <button

@@ -15,41 +15,22 @@ interface SolanounsMetadata {
 const Collection: React.FC = () => {
   const [solanouns, setSolanouns] = useState<SolanounsMetadata[]>([]);
   const [loading, setLoading] = useState(true);
-  const [loadingMore, setLoadingMore] = useState(false);
-  const [loadedNFTIds, setLoadedNFTIds] = useState<Set<number>>(new Set());
 
-  const loadSolanouns = async (startIndex = 0, count = 8) => {
+  const loadRandomSolanouns = async (count = 4) => {
     try {
       const nftData: SolanounsMetadata[] = [];
-      const nftIds: number[] = [];
       
-      // Generate random NFT IDs that haven't been loaded yet
-      const availableIds = Array.from({ length: 2222 }, (_, i) => i).filter(id => !loadedNFTIds.has(id));
-      
-      // If we don't have enough available IDs, reset the loaded set (start fresh)
-      if (availableIds.length < count) {
-        setLoadedNFTIds(new Set());
-        // Regenerate available IDs
-        for (let i = 0; i < Math.min(count, 2222); i++) {
-          const randomId = Math.floor(Math.random() * 2222);
-          if (!nftIds.includes(randomId)) {
-            nftIds.push(randomId);
-          }
+      // Generate random unique NFT IDs for fresh preview on each refresh
+      const randomIds: number[] = [];
+      while (randomIds.length < count) {
+        const randomId = Math.floor(Math.random() * 2222);
+        if (!randomIds.includes(randomId)) {
+          randomIds.push(randomId);
         }
-      } else {
-        // Select random IDs from available ones
-        const shuffledAvailable = availableIds.sort(() => Math.random() - 0.5);
-        nftIds.push(...shuffledAvailable.slice(0, count));
       }
       
-      // Update loaded IDs set
-      setLoadedNFTIds(prev => {
-        const newSet = new Set(prev);
-        nftIds.forEach(id => newSet.add(id));
-        return newSet;
-      });
-      
-      for (const id of nftIds) {
+      // Load metadata for each random NFT
+      for (const id of randomIds) {
         try {
           const response = await fetch(`/nft-asset/json/${id}.json`);
           if (response.ok) {
@@ -58,31 +39,38 @@ const Collection: React.FC = () => {
               ...metadata,
               imageUrl: `/nft-asset/images/${id}.png`
             });
+          } else {
+            // Fallback: if JSON doesn't exist, create basic metadata
+            nftData.push({
+              name: `Solanouns #${id}`,
+              image: `/nft-asset/images/${id}.png`,
+              imageUrl: `/nft-asset/images/${id}.png`,
+              edition: id,
+              attributes: []
+            });
           }
         } catch (error) {
           console.error(`Error loading NFT ${id}:`, error);
+          // Still add the NFT with basic info
+          nftData.push({
+            name: `Solanouns #${id}`,
+            image: `/nft-asset/images/${id}.png`,
+            imageUrl: `/nft-asset/images/${id}.png`,
+            edition: id,
+            attributes: []
+          });
         }
       }
       
-      if (startIndex === 0) {
-        setSolanouns(nftData);
-      } else {
-        setSolanouns(prev => [...prev, ...nftData]);
-      }
+      setSolanouns(nftData);
     } catch (error) {
-      console.error('Error loading Solanouns:', error);
+      console.error('Error loading random Solanouns:', error);
     }
-  };
-
-  const loadMoreNFTs = async () => {
-    setLoadingMore(true);
-    await loadSolanouns(solanouns.length, 4);
-    setLoadingMore(false);
   };
 
   useEffect(() => {
     const initializeCollection = async () => {
-      await loadSolanouns(0, 8);
+      await loadRandomSolanouns(4);
       setLoading(false);
     };
 
@@ -110,7 +98,7 @@ const Collection: React.FC = () => {
             Solanouns Collection
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Discover unique generative avatars with distinctive traits and characteristics
+            Discover unique generative avatars with distinctive traits and characteristics. Each refresh shows different random NFTs from the collection!
           </p>
         </div>
 
@@ -128,25 +116,33 @@ const Collection: React.FC = () => {
           ))}
         </div>
 
-        <div className="text-center mt-8 sm:mt-10 lg:mt-12">
+        <div className="text-center mt-8 sm:mt-10 lg:mt-12 space-y-4">
           <button
-            onClick={loadMoreNFTs}
-            disabled={loadingMore}
-            className="bg-solana-purple text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold hover:bg-purple-700 transition-all transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none text-sm sm:text-base"
+            onClick={() => {
+              setLoading(true);
+              loadRandomSolanouns(4).then(() => setLoading(false));
+            }}
+            className="inline-block bg-solana-purple text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold hover:bg-purple-700 transition-all transform hover:scale-105 text-sm sm:text-base mr-4"
           >
-            {loadingMore ? (
-              <span className="flex items-center justify-center gap-2">
-                <div className="animate-spin rounded-full h-4 w-4 sm:h-5 sm:w-5 border-b-2 border-white"></div>
-                <span className="hidden sm:inline">Loading More...</span>
-                <span className="sm:hidden">Loading...</span>
-              </span>
-            ) : (
-              <span>
-                <span className="hidden sm:inline">Load More NFTs</span>
-                <span className="sm:hidden">Load More</span>
-              </span>
-            )}
+            <span className="flex items-center justify-center gap-2">
+              <span>🎲</span>
+              <span className="hidden sm:inline">Show Different NFTs</span>
+              <span className="sm:hidden">Refresh</span>
+            </span>
           </button>
+          
+          <a
+            href="https://launchmynft.io"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-solana-green text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold hover:bg-green-600 transition-all transform hover:scale-105 text-sm sm:text-base"
+          >
+            <span className="flex items-center justify-center gap-2">
+              <span>🚀</span>
+              <span className="hidden sm:inline">Buy Solanouns Now</span>
+              <span className="sm:hidden">Buy Now</span>
+            </span>
+          </a>
         </div>
 
         <div className="text-center mt-6 sm:mt-8">
