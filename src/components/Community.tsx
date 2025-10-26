@@ -203,14 +203,14 @@ const Community: React.FC = () => {
           </div>
         </div>
 
-        {/* $SOLT Token Holder Benefits */}
+        {/* $SOLNT Token Holder Benefits */}
         <div className="bg-gradient-to-r from-yellow-500/10 to-orange-500/10 dark:from-yellow-500/20 dark:to-orange-500/20 p-8 rounded-2xl mt-12">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-              $SOLT Token Holder Benefits
+              $SOLNT Token Holder Benefits
             </h3>
             <p className="text-xl text-gray-600 dark:text-gray-300">
-              Additional exclusive benefits for $SOLT Solanouns Token holders
+              Additional exclusive benefits for $SOLNT Solanouns Token holders
             </p>
           </div>
 
@@ -235,7 +235,7 @@ const Community: React.FC = () => {
                 Staking Rewards
               </h4>
               <p className="text-sm text-gray-600 dark:text-gray-300">
-                Earn additional $SOLT tokens through staking mechanisms
+                Earn additional $SOLNT tokens through staking mechanisms
               </p>
             </div>
 
@@ -270,7 +270,7 @@ const Community: React.FC = () => {
             </h4>
             <div className="mb-4 p-3 bg-yellow-500/10 dark:bg-yellow-500/20 rounded-lg">
               <p className="text-sm text-gray-700 dark:text-gray-300 text-center">
-                <strong>Note:</strong> $SOLT tokens provide DAO access but do not grant voting power. Only Solanouns NFT holders have voting rights.
+                <strong>Note:</strong> $SOLNT tokens provide DAO access but do not grant voting power. Only Solanouns NFT holders have voting rights.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -322,7 +322,7 @@ const Community: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-2xl font-bold text-gray-900 dark:text-white">
-                    Phase 1: NFT Collection & $SOLT Token Launch
+                    Phase 1: NFT Collection & $SOLNT Token Launch
                   </h4>
                   <p className="text-gray-600 dark:text-gray-400">
                     Completed - Q4 2025
@@ -339,7 +339,7 @@ const Community: React.FC = () => {
                 <div className="flex items-center space-x-2">
                   <span className="text-solana-green">✓</span>
                   <span className="text-gray-700 dark:text-gray-300">
-                    $SOLT Token Launch on pump.fun
+                    $SOLNT Token Launch on pump.fun
                   </span>
                 </div>
                 <div className="flex items-center space-x-2">
@@ -372,7 +372,7 @@ const Community: React.FC = () => {
                 <h5 className="font-semibold text-gray-900 dark:text-white mb-2">🚀 Launch Highlights</h5>
                 <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
                   <li>• Simultaneous NFT and token launch for complete ecosystem</li>
-                  <li>• $SOLT fair launch: 800M bonding curve + 200M liquidity pool</li>
+                  <li>• $SOLNT fair launch: 800M bonding curve + 200M liquidity pool</li>
                   <li>• 100% public distribution with no team or VC allocations</li>
                   <li>• Immediate utility for NFT holders and token holders</li>
                 </ul>
@@ -438,7 +438,7 @@ const Community: React.FC = () => {
                 <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
                   <li>• Decentralized decision-making for all major community initiatives</li>
                   <li>• Exclusive NFT holder voting rights (1 NFT = 1 Vote)</li>
-                  <li>• $SOLT holders get DAO access without voting power</li>
+                  <li>• $SOLNT holders get DAO access without voting power</li>
                   <li>• Transparent treasury management with community oversight</li>
                   <li>• Proposal system for community-driven development</li>
                   <li>• Multi-signature security for all treasury transactions</li>
@@ -536,7 +536,7 @@ const Community: React.FC = () => {
                 <div className="flex items-center space-x-2">
                   <span className="text-orange-500">💰</span>
                   <span className="text-gray-700 dark:text-gray-300">
-                    $SOLT Payment Integration
+                    $SOLNT Payment Integration
                   </span>
                 </div>
                 <div className="flex items-center space-x-2">
@@ -569,7 +569,7 @@ const Community: React.FC = () => {
                 <h5 className="font-semibold text-gray-900 dark:text-white mb-2">🏪 Marketplace Features</h5>
                 <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
                   <li>• Custom-built marketplace exclusively for Solanouns NFTs</li>
-                  <li>• $SOLT token discounts and exclusive trading benefits</li>
+                  <li>• $SOLNT token discounts and exclusive trading benefits</li>
                   <li>• Advanced filtering by traits and rarity rankings</li>
                   <li>• Community-driven curation and featured collections</li>
                   <li>• Integration with DAO governance for marketplace decisions</li>
