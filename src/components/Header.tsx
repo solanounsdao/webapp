@@ -61,17 +61,23 @@ const Header: React.FC = () => {
             >
               Playground
             </Link>
+            <Link 
+              to="/docs" 
+              className="text-gray-700 dark:text-gray-300 hover:text-solana-purple transition-colors"
+            >
+              Docs
+            </Link>
           </nav>
 
           <div className="flex items-center space-x-4">
             {/* Buy Token Button */}
             <a
-              href="https://jup.ag/swap/SOL-SOLANOUNS"
+              href="https://pump.fun/coin/SOLNT"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:flex items-center px-4 py-2 bg-solana-purple hover:bg-solana-green text-white font-semibold rounded-lg transition-colors shadow-lg hover:shadow-xl transform hover:scale-105"
             >
-              💰 Buy Token
+              💰 Buy $SOLNT
             </a>
             
             <button
@@ -133,16 +139,23 @@ const Header: React.FC = () => {
               >
                 Playground
               </Link>
+              <Link 
+                to="/docs" 
+                onClick={() => setIsMenuOpen(false)}
+                className="block w-full text-left text-gray-700 dark:text-gray-300 hover:text-solana-purple transition-colors"
+              >
+                Docs
+              </Link>
               
               {/* Buy Token Button for Mobile */}
               <a
-                href="https://jup.ag/swap/SOL-SOLANOUNS"
+                href="https://https://pump.fun/coin/SOLNT"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsMenuOpen(false)}
                 className="block w-full text-center px-4 py-3 bg-solana-purple hover:bg-solana-green text-white font-semibold rounded-lg transition-colors shadow-lg mt-4"
               >
-                💰 Buy SOLANOUNS Token
+                💰 Buy $SOLNT
               </a>
             </div>
           </div>

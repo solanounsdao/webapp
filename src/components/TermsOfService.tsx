@@ -39,7 +39,7 @@ const TermsOfService: React.FC = () => {
               </h2>
               <div className="text-gray-700 dark:text-gray-300 space-y-4">
                 <p>
-                  Solanouns is a collection of 2,222 unique digital collectibles (NFTs) on the Solana blockchain. Our service includes:
+                  Solanouns Project is a generative cult art collective of 2222 unique NFTs on Solana with a utility token called $SOLNT integrated with x402 protocol. Our service includes:
                 </p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>NFT marketplace and trading platform</li>

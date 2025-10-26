@@ -6,6 +6,7 @@ const Docs: React.FC = () => {
   const sections = [
     { id: 'getting-started', title: 'Getting Started', icon: '🚀' },
     { id: 'collection', title: 'Collection Details', icon: '🎨' },
+    { id: 'tokenomics', title: '$SOLNT Tokenomics', icon: '🪙' },
     { id: 'governance', title: 'DAO Governance', icon: '🏛️' },
     { id: 'staking', title: 'Staking & Rewards', icon: '💰' },
     { id: 'technical', title: 'Technical Specs', icon: '⚙️' },
@@ -101,68 +102,246 @@ const Docs: React.FC = () => {
             <div>
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Collection Details</h2>
               <p className="text-xl text-gray-600 dark:text-gray-300 mb-6">
-                Each Solanouns is unique, generated from a combination of traits with varying rarity levels.
+                Solanouns is a generative cult art collective of 2222 unique NFTs on Solana with a utility token called $SOLNT integrated with x402 protocol.
               </p>
             </div>
 
             <div className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Trait Categories</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Background</h4>
-                  <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
-                    <li>• Solana Purple (Common)</li>
-                    <li>• Solana Green (Common)</li>
-                    <li>• Cosmic Blue (Rare)</li>
-                    <li>• Golden Hour (Epic)</li>
-                    <li>• Rainbow (Legendary)</li>
-                  </ul>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Collection Metadata</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-3">
+                  <div className="flex justify-between">
+                    <span className="text-gray-600 dark:text-gray-300">Total Supply:</span>
+                    <span className="font-semibold text-gray-900 dark:text-white">2,222 NFTs</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600 dark:text-gray-300">Symbol:</span>
+                    <span className="font-semibold text-gray-900 dark:text-white">SOLN</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600 dark:text-gray-300">Blockchain:</span>
+                    <span className="font-semibold text-gray-900 dark:text-white">Solana</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600 dark:text-gray-300">Engine:</span>
+                    <span className="font-semibold text-gray-900 dark:text-white">REVAMPED ART ENGINE</span>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Body</h4>
-                  <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
-                    <li>• Human (Common)</li>
-                    <li>• Robot (Uncommon)</li>
-                    <li>• Alien (Rare)</li>
-                    <li>• Cyborg (Epic)</li>
-                    <li>• Spirit (Legendary)</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Accessories</h4>
-                  <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
-                    <li>• Sunglasses (Common)</li>
-                    <li>• Cap (Common)</li>
-                    <li>• Crown (Rare)</li>
-                    <li>• Halo (Epic)</li>
-                    <li>• Laser Eyes (Legendary)</li>
-                  </ul>
+                <div className="space-y-3">
+                  <div className="flex justify-between">
+                    <span className="text-gray-600 dark:text-gray-300">Trait Layers:</span>
+                    <span className="font-semibold text-gray-900 dark:text-white">5 Layers</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600 dark:text-gray-300">Art Style:</span>
+                    <span className="font-semibold text-gray-900 dark:text-white">Pixel Art</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600 dark:text-gray-300">Protocol:</span>
+                    <span className="font-semibold text-gray-900 dark:text-white">x402 Integration</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600 dark:text-gray-300">Utility Token:</span>
+                    <span className="font-semibold text-gray-900 dark:text-white">$SOLNT</span>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-solana-green/10 dark:bg-solana-green/20 p-6 rounded-xl">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Rarity Distribution</h3>
-              <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-gray-500 mb-1">60%</div>
-                  <div className="text-sm text-gray-600 dark:text-gray-300">Common</div>
+            <div className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Trait Categories & Layers</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">
+                Each Solanouns NFT consists of exactly 5 trait layers with numbered variations based on the actual metadata structure.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <div>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">🎨 Background</h4>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-2">Layer 1 - Foundation</p>
+                  <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
+                    <li>• Background 1-15</li>
+                    <li>• Various color schemes</li>
+                    <li>• Unique patterns</li>
+                    <li>• Solana-themed designs</li>
+                  </ul>
                 </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-green-500 mb-1">25%</div>
-                  <div className="text-sm text-gray-600 dark:text-gray-300">Uncommon</div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">👤 Head</h4>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-2">Layer 2 - Character</p>
+                  <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
+                    <li>• Head 1-250+</li>
+                    <li>• Diverse character types</li>
+                    <li>• Unique facial features</li>
+                    <li>• Various expressions</li>
+                  </ul>
                 </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-500 mb-1">10%</div>
-                  <div className="text-sm text-gray-600 dark:text-gray-300">Rare</div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">🦾 Body</h4>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-2">Layer 3 - Form</p>
+                  <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
+                    <li>• Body 1-20+</li>
+                    <li>• Different body types</li>
+                    <li>• Various clothing styles</li>
+                    <li>• Unique textures</li>
+                  </ul>
                 </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-purple-500 mb-1">4%</div>
-                  <div className="text-sm text-gray-600 dark:text-gray-300">Epic</div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">⚡ Accessories</h4>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-2">Layer 4 - Style (Required)</p>
+                  <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
+                    <li>• Accessories 1-100+</li>
+                    <li>• Jewelry & chains</li>
+                    <li>• Tech gadgets</li>
+                    <li>• Special items</li>
+                  </ul>
                 </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-yellow-500 mb-1">1%</div>
-                  <div className="text-sm text-gray-600 dark:text-gray-300">Legendary</div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">🕶️ Glasses</h4>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-2">Layer 5 - Vision (Required)</p>
+                  <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
+                    <li>• Glasses 1-50+</li>
+                    <li>• Classic sunglasses</li>
+                    <li>• Future tech designs</li>
+                    <li>• Unique eyewear</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div className="mt-6 p-4 bg-gradient-to-r from-purple-500/10 to-blue-500/10 dark:from-purple-500/20 dark:to-blue-500/20 rounded-lg">
+                <h5 className="font-semibold text-gray-900 dark:text-white mb-2">📋 Metadata Structure</h5>
+                <div className="text-sm text-gray-600 dark:text-gray-300">
+                  <p className="mb-2">Each NFT contains the following standardized attributes:</p>
+                  <ul className="space-y-1 ml-4">
+                    <li>• <strong>Background:</strong> "Background X" (numbered variations)</li>
+                    <li>• <strong>Head:</strong> "Head X" (numbered variations)</li>
+                    <li>• <strong>Body:</strong> "Body X" (numbered variations)</li>
+                    <li>• <strong>Accessories:</strong> "Accessories X" (numbered variations)</li>
+                    <li>• <strong>Glasses:</strong> "Glasses X" (numbered variations)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+
+      case 'tokenomics':
+        return (
+          <div className="space-y-8">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">$SOLNT Tokenomics</h2>
+              <p className="text-xl text-gray-600 dark:text-gray-300 mb-6">
+                $SOLNT is the utility token of the Solanouns ecosystem, designed for DAO feature access, staking, and ecosystem growth. 
+                Launching on pump.fun with 100% public distribution ensuring fair access for all participants.
+                <br /><br />
+                <strong>Important:</strong> $SOLNT tokens provide access to DAO features but do not grant voting power. Only Solanouns NFT holders have voting rights in the DAO.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-r from-solana-purple/10 to-solana-green/10 dark:from-solana-purple/20 dark:to-solana-green/20 p-6 rounded-xl">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Token Overview</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-3">
+                  <div className="flex justify-between">
+                    <span className="text-gray-600 dark:text-gray-300">Token Name:</span>
+                    <span className="font-semibold text-gray-900 dark:text-white">Solanouns Token</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600 dark:text-gray-300">Symbol:</span>
+                    <span className="font-semibold text-gray-900 dark:text-white">$SOLNT</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600 dark:text-gray-300">Total Supply:</span>
+                    <span className="font-semibold text-gray-900 dark:text-white">1,000,000,000 SOLNT</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600 dark:text-gray-300">Launch Platform:</span>
+                    <span className="font-semibold text-gray-900 dark:text-white">pump.fun</span>
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex justify-between">
+                    <span className="text-gray-600 dark:text-gray-300">Blockchain:</span>
+                    <span className="font-semibold text-gray-900 dark:text-white">Solana</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600 dark:text-gray-300">Protocol:</span>
+                    <span className="font-semibold text-gray-900 dark:text-white">x402 Integration</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600 dark:text-gray-300">Type:</span>
+                    <span className="font-semibold text-gray-900 dark:text-white">Utility Token</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600 dark:text-gray-300">Max Supply:</span>
+                    <span className="font-semibold text-gray-900 dark:text-white">1B SOLNT</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">🎯 Utility & Use Cases</h3>
+                <ul className="space-y-3 text-gray-600 dark:text-gray-300">
+                  <li className="flex items-start">
+                    <span className="text-solana-purple mr-2 mt-1">•</span>
+                    <span><strong>DAO Access:</strong> Access DAO features and participate in discussions (voting power requires NFT ownership)</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-solana-purple mr-2 mt-1">•</span>
+                    <span><strong>Staking:</strong> Earn rewards by staking SOLNT tokens</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-solana-purple mr-2 mt-1">•</span>
+                    <span><strong>NFT Access:</strong> Exclusive drops and marketplace benefits</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-solana-purple mr-2 mt-1">•</span>
+                    <span><strong>x402 Protocol:</strong> Advanced DeFi integrations and yield farming</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">📊 Distribution</h3>
+                <div className="mb-4 p-4 bg-solana-purple/10 dark:bg-solana-purple/20 rounded-lg">
+                  <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
+                    <strong>100% Public Distribution</strong> - All tokens are available to the public through pump.fun
+                  </p>
+                  <p className="text-xs text-gray-500 dark:text-gray-400">
+                    No team allocation, no private sales, no VCs - completely fair launch
+                  </p>
+                </div>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <span className="text-gray-600 dark:text-gray-300">Bonding Curve (pump.fun)</span>
+                      <div className="text-xs text-gray-500 dark:text-gray-400">Trading on pump.fun platform</div>
+                    </div>
+                    <div className="text-right">
+                      <div className="font-semibold text-gray-900 dark:text-white">80%</div>
+                      <div className="text-sm text-gray-500">800M SOLNT</div>
+                    </div>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <span className="text-gray-600 dark:text-gray-300">Liquidity Pool</span>
+                      <div className="text-xs text-gray-500 dark:text-gray-400">DEX liquidity provision</div>
+                    </div>
+                    <div className="text-right">
+                      <div className="font-semibold text-gray-900 dark:text-white">20%</div>
+                      <div className="text-sm text-gray-500">200M SOLNT</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="mt-6 p-4 bg-gradient-to-r from-solana-purple/10 to-solana-green/10 dark:from-solana-purple/20 dark:to-solana-green/20 rounded-lg">
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">🚀 Launch Details</h4>
+                  <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
+                    <li>• Platform: pump.fun</li>
+                    <li>• Launch Type: Fair Launch (No Presale)</li>
+                    <li>• Max Supply: 1,000,000,000 SOLNT</li>
+                    <li>• All tokens available to public</li>
+                  </ul>
                 </div>
               </div>
             </div>
