@@ -13,6 +13,20 @@ interface FeaturedNFT {
 
 const Hero: React.FC = () => {
   const [featuredNFT, setFeaturedNFT] = useState<FeaturedNFT | null>(null);
+  const [copied, setCopied] = useState(false);
+  
+  // Placeholder contract address - same as in footer
+  const contractAddress = "SoL4N0uNs1234567890aBcDeFgHiJkLmNoPqRsTuVwXyZ";
+  
+  const copyToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(contractAddress);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy: ', err);
+    }
+  };
 
   const loadRandomNFT = async () => {
     try {
@@ -101,6 +115,36 @@ const Hero: React.FC = () => {
                 Learn More
               </button>
             </div>
+                  {/* Contract Address Section */}
+
+        <div className="text-center space-y-2">
+          <button
+            onClick={copyToClipboard}
+            className="group relative flex items-center space-x-3 bg-gradient-to-r from-purple-50 to-green-50 dark:from-gray-800 dark:to-gray-700 hover:from-purple-100 hover:to-green-100 dark:hover:from-gray-700 dark:hover:to-gray-600 rounded-xl px-4 py-3 backdrop-blur-sm border-2 border-purple-200 dark:border-gray-600 hover:border-purple-300 dark:hover:border-purple-400 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+            title="Click to copy contract address"
+          >
+            <div className="flex items-center space-x-2 flex-1">
+              <span className="text-purple-600 dark:text-purple-400">🔗</span>
+              <span className="text-sm font-mono text-gray-700 dark:text-gray-300 truncate max-w-[180px] sm:max-w-[220px] font-semibold">
+                {contractAddress}
+              </span>
+            </div>
+            <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center rounded-full bg-white dark:bg-gray-600 shadow-sm">
+              {copied ? (
+                <span className="text-solana-green text-sm animate-pulse">✓</span>
+              ) : (
+                <span className="text-purple-500 group-hover:text-solana-purple text-sm transition-colors">📋</span>
+              )}
+            </div>
+            {!copied && (
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-purple-400/20 to-green-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+            )}
+          </button>
+          {copied && (
+            <p className="text-sm text-solana-green font-medium animate-bounce">Contract Copied! 🎉</p>
+          )}
+        </div>
+
           </div>
           
           <div className="relative mt-8 lg:mt-0">
@@ -129,6 +173,8 @@ const Hero: React.FC = () => {
           </div>
         </div>
       </div>
+
+
 
       <br/><br/><br/><br/><br/><br/>
       

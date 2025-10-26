@@ -1,8 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import packageJson from '../../package.json';
 
 const Footer: React.FC = () => {
+  const [copied, setCopied] = useState(false);
+  
+  // Placeholder contract address - replace with actual contract address
+  const contractAddress = "SoL4N0uNs1234567890aBcDeFgHiJkLmNoPqRsTuVwXyZ";
+  
+  const copyToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(contractAddress);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy: ', err);
+    }
+  };
   return (
     <footer className="bg-gray-900 dark:bg-black text-white py-12 sm:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -19,6 +33,30 @@ const Footer: React.FC = () => {
               <a href="https://mee6.xyz/i/37plYwmYJY " className="text-gray-400 dark:text-gray-500 hover:text-solana-purple transition-colors text-sm sm:text-base">
                 💬 Discord
               </a>
+            </div>
+            
+            {/* Contract Address */}
+            <div className="space-y-2">
+              <h5 className="text-sm font-semibold text-gray-300">Contract Address</h5>
+              <button
+                onClick={copyToClipboard}
+                className="group flex items-center space-x-2 bg-gray-800 hover:bg-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 rounded-lg px-3 py-2 transition-colors cursor-pointer"
+                title="Click to copy contract address"
+              >
+                <span className="text-xs sm:text-sm font-mono text-gray-300 truncate max-w-[200px] sm:max-w-[250px]">
+                  {contractAddress}
+                </span>
+                <div className="flex-shrink-0">
+                  {copied ? (
+                    <span className="text-solana-green text-xs">✓</span>
+                  ) : (
+                    <span className="text-gray-400 group-hover:text-white text-xs">📋</span>
+                  )}
+                </div>
+              </button>
+              {copied && (
+                <p className="text-xs text-solana-green">Contract address copied!</p>
+              )}
             </div>
           </div>
           

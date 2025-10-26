@@ -64,6 +64,16 @@ const Header: React.FC = () => {
           </nav>
 
           <div className="flex items-center space-x-4">
+            {/* Buy Token Button */}
+            <a
+              href="https://jup.ag/swap/SOL-SOLANOUNS"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:flex items-center px-4 py-2 bg-solana-purple hover:bg-solana-green text-white font-semibold rounded-lg transition-colors shadow-lg hover:shadow-xl transform hover:scale-105"
+            >
+              💰 Buy Token
+            </a>
+            
             <button
               onClick={toggleTheme}
               className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
@@ -123,6 +133,17 @@ const Header: React.FC = () => {
               >
                 Playground
               </Link>
+              
+              {/* Buy Token Button for Mobile */}
+              <a
+                href="https://jup.ag/swap/SOL-SOLANOUNS"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsMenuOpen(false)}
+                className="block w-full text-center px-4 py-3 bg-solana-purple hover:bg-solana-green text-white font-semibold rounded-lg transition-colors shadow-lg mt-4"
+              >
+                💰 Buy SOLANOUNS Token
+              </a>
             </div>
           </div>
         )}
